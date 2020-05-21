@@ -41,7 +41,6 @@ nav {
 .breadcrumb {
     .breadcrumb-item {
         &:after {
-            @include font-size-xsmaller;
             @include text-muted;
             font-weight: 900;
             content: ' \00BB ';

@@ -1,0 +1,12 @@
+{
+    "name": "leafcutter/theme-template",
+    "description": "Leafcutter theme project template.",
+    "authors": [
+        {
+            "name": "Joby Elliott",
+            "email": "code@byjoby.com"
+        }
+    ],
+    "license": "MIT",
+    "type": "leafcutter-theme"
+}

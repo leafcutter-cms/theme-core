@@ -1,0 +1,61 @@
+# Add all the CSS files to be included automatically when
+# this theme is activated. Note that for preprocessors
+# such as SCSS you can just use the extension css, even
+# though the actual filename is .scss, and Leafcutter will
+# figure it out.
+#
+# Paths are relative to this file, and should not have a
+# leading slash.
+# 
+# The key "theme" denotes a "category" that this CSS will
+# be placed in. Categories might be used as CSS media
+# queries, such as "screen" or "print", but are also a
+# way of controlling load order and segmenting merged files
+# in a rational way.
+#
+# The categories that might be reasonable to use here, in
+# the order they are loaded are:
+# * library: extremely stable and widely-reused code like third-party libraries, will not be inlined
+# * blocking: high load order, highest priority for inlining
+# * theme: theme-specific code
+# * all: generic location
+# * screen: loaded with media="screen" directive
+# * print: loaded with a media="print" directive
+# * speech: loaded with a media="speech" directive
+# * site: site- or section-specific code
+css:
+  theme:
+    - theme/theme.css
+
+# Add all the JS files to be included automatically here.
+# The concept is extremely similar to the css section, and
+# the categories that might be appropriate to use here are:
+# * library: loads first, intended for things that are very stable, generally third-party libs
+# * theme: loads after library, intended to give a section before "site" for themes
+# * all: generic location
+# * site: code that is highly specific to this site
+js:
+  theme:
+    - theme/theme.js
+
+# Add any other theme packages your theme depends on here
+# Some useful packages that are available in a default
+# installation are:
+# * jquery
+# * jquery-ui (includes theme-variable-respecting theme CSS)
+# * fontawesome (only includes CSS/fonts, no JS)
+# * vue
+require: []
+
+# Add any optional theme packages your theme provides here
+# Each one should have a key for its name, and contain any
+# necessary requires, css, or js keys, which would be
+# structured the same way as the root of this file.
+# 
+# For example:
+#
+# packages:
+#   my-package:
+#     requires: [jquery]
+#     css: [my-package.css]
+packages: []

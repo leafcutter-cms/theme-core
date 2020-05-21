@@ -11,8 +11,8 @@
  * Modified from the default jQuery UI theme to integrate with Leafcutter theme
  */
 
-@import "@/~themes/leafcutter-libraries/mixins/colors.scss";
-@import "@/~themes/leafcutter-libraries/mixins/sizing.scss";
+@import "@/~themes/theme-core/mixins/colors.scss";
+@import "@/~themes/theme-core/mixins/sizing.scss";
 
 @function high-contrast-icon($color) {
     @if (lightness($color) > 50) {

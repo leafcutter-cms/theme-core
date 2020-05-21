@@ -29,6 +29,7 @@ header,
 nav,
 main,
 footer {
+    margin: 0;
     @include margin-block;
 }
 

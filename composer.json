@@ -1,6 +1,6 @@
 {
-    "name": "leafcutter/theme-template",
-    "description": "Leafcutter theme project template.",
+    "name": "leafcutter/theme-core",
+    "description": "Core theme, which provides useful base packages for building new themes, as well as loading common CSS/JS libraries.",
     "authors": [
         {
             "name": "Joby Elliott",

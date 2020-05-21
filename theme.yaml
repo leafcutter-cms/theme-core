@@ -1,8 +1,6 @@
 packages:
   # basic base theme
   core/basic:
-    require:
-      - library/fontawesome
     css:
       library:
         - base-themes/basic/library.css

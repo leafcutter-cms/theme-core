@@ -43,9 +43,8 @@ nav {
         &:after {
             @include font-size-xsmaller;
             @include text-muted;
-            font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            content: ' \f101 ';
+            content: ' \00BB ';
             display: inline;
         }
 

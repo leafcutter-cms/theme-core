@@ -1,27 +1,39 @@
-# Leafcutter theming guide
+# Leafcutter core themes
 
-## Beginning a new theme
+## Installation
 
-### Creating a one-off theme
+This package is meant to be installed via Composer, and is already installed by default if you're using the suggested site-template repository. If you're rolling your own site, it can be installed with `composer require leafcutter/theme-core`
 
-If you're just making a one-off theme for a single site, you can start by creating a folder inside your site's `themes` directory, named whatever you'd like your theme to be called.
+## What's in it
 
-If you'd like to make your theme in a way that allows it to be distributed via Composer, you can follow the next step instead. If not, skip directly to "The `theme.yaml` file"
+This package contains several Leafcutter theme packages, none of which are actually activated by default. It is intended to provide consistent and updateable core third-party libraries, and a variety of useful base themes that can be used as starting points for building more complete/advanced themes.
 
-### Creating a Composer theme
+### Library packages
 
-Navigate to where you would like to start your new project, and run a command like `composer create-project leafcutter/theme-template my-theme-name --remove-vcs` where `my-theme-name` is what you'd like your theme to be called.
+#### `library/fontawesome`
 
-#### The `composer.json` file
+Provides just the CSS and font files of Font Awesome Free. None of Font Awesome's Javascript is included in this package.
 
-Edit the `name`, `description`, `license`, and `authors` fields as you see fit. `type` must remain `leafcutter-theme` for sites using the theme to have it automatically registered.
+#### `library/jquery`
 
-## The `theme.yaml` file
+Provides just a minified production-ready copy of jQuery.
 
-`theme.yaml` holds all the configuration for your theme, mainly which CSS and JS files should be loaded by it, and what optional packages it provides -- if any. The `theme.yaml` in this repository includes basic instructions that cover the bare minimum use cases.
+#### `library/jquery-ui`
 
-## Theme assets
+Provides jQuery UI's Javascript and modified CSS that integrates the jQuery UI CSS libraries with Leafcutter's theming system.
 
-You can organize the JS, CSS, and other linked files of your theme however you see fit. Just make sure to use relative URLs whenever referencing anything in CSS, and Leafcutter will automatically resolve them for you and assemble everything so that it works at runtime.
+##### Customizing with `library/jquery-ui-theme`
 
-Referencing linked files from JS isn't currently possible, but it is on the horizon as a possibility. There are some structural decisions that need to be made about how exactly that will work.
+This package is loaded automatically as a requirement of `library/jquery-ui`, but kept in its own package to ease customization. If you would like to override the built-in jQuery UI theme, you can do so by providing this package in your own theme bundle.
+
+#### `library/vue`
+
+Provides just a minified production-ready copy of Vue.js
+
+### Base themes
+
+The following base themes are intended to provide useful jumping-off points to create your own themes. Add them to the `requires` portion of your own theme to load them as part of it.
+
+#### `core/basic`
+
+Provides config-dependent colors, typography, and helper classes for formatting the colors, spacing, and backgrounds of elements. This is the lightest-weight base theme, and does very little beyond some basic typography.

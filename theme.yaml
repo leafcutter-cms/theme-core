@@ -1,4 +1,7 @@
 packages:
+  # -----------
+  # BASE THEMES
+  # -----------
   # basic base theme
   core/basic:
     css:
@@ -6,35 +9,41 @@ packages:
         - base-themes/basic/library.css
       blocking:
         - base-themes/basic/blocking.css
-  # package for loading jquery UI and a theme
-  library/jquery-ui:
-    require:
-      - library/jquery
-    require-after:
-      - library/jquery-ui-theme
-    js:
-      library:
-        jquery-ui: jquery/jquery-ui.js
-    css:
-      library:
-        jquery-ui: jquery/jquery-ui.css
-        jquery-ui-structure: jquery/jquery-ui.structure.css
-  # package for loading jquery UI theme, shouldn't be called directly
-  library/jquery-ui-theme:
-    css:
-      library:
-        jquery-ui-theme: jquery/jquery-ui.theme.css
-  # package for loading just jQuery
+  # ---------
+  # LIBRARIES
+  # ---------
+  # jQuery
   library/jquery:
     js:
       library:
         jquery: jquery/jquery.js
-  # package for loading just vue
+  # jQuery UI JS
+  library/jquery-ui:
+    require:
+      - library/jquery
+      - library/jquery-ui-css
+    js:
+      library:
+        jquery-ui: jquery/jquery-ui.js
+  # jQuery UI CSS, generally shouldn't be called directly
+  library/jquery-ui-css:
+    css:
+      library:
+        jquery-ui: jquery/jquery-ui.css
+        jquery-ui-structure: jquery/jquery-ui.structure.css
+    require-after:
+      - library/jquery-ui-theme
+  # jQuery UI theme, in its own package to allow customization
+  library/jquery-ui-theme:
+    css:
+      library:
+        jquery-ui-theme: jquery/jquery-ui.theme.css
+  # vue.js
   library/vue:
     js:
       library:
         vue: vue/vue.min.js
-  # package for loading just the CSS of fontawesome
+  # Font Awesome CSS only
   library/fontawesome:
     css:
       library:

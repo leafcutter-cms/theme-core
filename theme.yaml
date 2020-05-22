@@ -1,3 +1,6 @@
+# the core theme should be overrideable by everything
+priority: -1
+
 packages:
   # -----------
   # BASE THEMES

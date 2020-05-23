@@ -22,7 +22,7 @@ Provides just a minified production-ready copy of jQuery.
 
 Provides jQuery UI's Javascript and modified CSS that integrates the jQuery UI CSS libraries with Leafcutter's theming system.
 
-##### Customizing with `library/jquery-ui-theme`
+##### Customizing with `library/jquery-ui/theme`
 
 This package is loaded automatically as a requirement of `library/jquery-ui`, but kept in its own package to ease customization. If you would like to override the built-in jQuery UI theme, you can do so by providing this package in your own theme bundle.
 

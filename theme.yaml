@@ -29,15 +29,15 @@ packages:
       library:
         jquery-ui: jquery/jquery-ui.js
   # jQuery UI CSS, generally shouldn't be called directly
-  library/jquery-ui-css:
+  library/jquery-ui/css:
     css:
       library:
         jquery-ui: jquery/jquery-ui.css
         jquery-ui-structure: jquery/jquery-ui.structure.css
     require-after:
-      - library/jquery-ui-theme
+      - library/jquery-ui/theme
   # jQuery UI theme, in its own package to allow customization
-  library/jquery-ui-theme:
+  library/jquery-ui/theme:
     css:
       library:
         jquery-ui-theme: jquery/jquery-ui.theme.css

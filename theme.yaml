@@ -12,6 +12,13 @@ packages:
         - base-themes/basic/library.css
       blocking:
         - base-themes/basic/blocking.css
+  # ------------------
+  # INTERNAL LIBRARIES
+  # ------------------
+  leafcutter/js/events:
+    js:
+      library:
+        - leafcutter/events.js
   # ---------
   # LIBRARIES
   # ---------

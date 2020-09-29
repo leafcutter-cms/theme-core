@@ -437,3 +437,23 @@ link colors
         color: $color-dark-a-active;
     }
 }
+
+@mixin a-interaction-colors {
+    &:focus {
+        @include a-focus;
+    }
+    &:hover {
+        @include a-hover;
+    }
+    &:active {
+        @include a-active;
+    }
+}
+
+@mixin a-colors {
+    @include a-link;
+    &:visited {
+        @include a-visited;
+    }
+    @include a-interaction-colors;
+}
